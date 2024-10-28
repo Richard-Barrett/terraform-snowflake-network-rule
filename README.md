@@ -45,7 +45,7 @@ An Example of a CICD Integration using Codefresh and BitBucket with this module 
 
 ```hcl
 module "snowflake_network_rule" {
-  source = "git::https://github.com/Richard-Barrett/terraform-snowflake-network-rule.git?ref=0.1.0"
+  source = "git::https://github.com/Richard-Barrett/terraform-snowflake-network-rule.git?ref=0.2.0"
 
 
   network_rule_name         = "example_rule"
