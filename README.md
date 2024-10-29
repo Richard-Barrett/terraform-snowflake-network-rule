@@ -1,3 +1,5 @@
+<img align="right" width="60" height="60" src="images/terraform.png">
+
 # Snowflake Network Rule Terraform Module: terraform-snowflake-network-rule
 
 This Terraform module creates a Snowflake network rule to manage network access to a Snowflake database. The network rule is configured with parameters for the database, schema, traffic mode, and list of allowed or denied values (e.g., IP addresses).
