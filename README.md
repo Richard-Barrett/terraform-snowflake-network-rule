@@ -40,8 +40,8 @@ An Example of a CICD Integration using Codefresh and BitBucket with this module 
 
 ## Requirements
 
-- **Terraform**: Version >= 1.5.7
-- **Snowflake Provider**: Version ~> 0.97.0
+- **Terraform**: Version >= 1.3.6
+- **Snowflake Provider**: Version >= 1.0.0
 
 ## Usage
 
