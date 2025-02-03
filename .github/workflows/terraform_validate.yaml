@@ -1,16 +1,25 @@
 ---
-name: Terraform Validate
-on: [push]
-
-jobs:
-  validate:
-    runs-on: ubuntu-latest
-    name: Validate Terraform module
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: terraform validate
-        uses: dflook/terraform-validate@v1
-        with:
-          path: 'examples/complete/'
+  name: Terraform Validate
+  on: [push]
+  
+  jobs:
+    validate:
+      runs-on: ubuntu-latest
+      name: Validate Terraform module
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+  
+        - name: Setup Terraform
+          uses: hashicorp/setup-terraform@v3
+          with:
+            terraform_version: 1.5.7  # Adjust to your required version
+  
+        - name: Initialize Terraform
+          run: terraform init -upgrade
+          working-directory: examples/complete/
+  
+        - name: Validate Terraform
+          run: terraform validate
+          working-directory: examples/complete/
+  
